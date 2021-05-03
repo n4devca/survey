@@ -1,4 +1,12 @@
 # Survey
 
-A simple survey application to play with Kotlin, spring boot and spring data.
+A simple playground application using:
+
+- Kotlin
+- Spring framework (web, security, boot, spring data)
+- H2 Database
+- Flyway
+- Github Actions to build and run tests
+
+
 

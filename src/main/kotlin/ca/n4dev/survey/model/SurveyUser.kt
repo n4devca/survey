@@ -15,11 +15,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "survey_user")
-data class SurveyUser (
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+data class SurveyUser(
 
     val username: String,
 
@@ -33,6 +29,10 @@ data class SurveyUser (
         joinColumns = [JoinColumn(name = "user_id")],
         inverseJoinColumns = [JoinColumn(name = "authority_id")])
     val authorities: List<Authority>,
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long = 0,
 
     val version: Int = 0
 

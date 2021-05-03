@@ -1,22 +1,19 @@
 package ca.n4dev.survey.service
 
+import ca.n4dev.survey.BaseTest
 import ca.n4dev.survey.model.Authority
 import ca.n4dev.survey.repository.AuthorityRepository
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-
 import org.mockito.Mockito.`when`
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.mock.mockito.MockBean
 
 /**
  * Copyright 2021 Remi Guillemette
  * SPDX-License-Identifier: Apache-2.0
  */
-@SpringBootTest
-internal class AuthoryServiceImplTest {
+internal class AuthoryServiceImplTest : BaseTest {
 
     @MockBean
     private lateinit var authorityRepository: AuthorityRepository

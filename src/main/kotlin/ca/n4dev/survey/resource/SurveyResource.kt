@@ -4,10 +4,12 @@
  */
 package ca.n4dev.survey.resource
 
-data class SurveyResource (
+data class SurveyResource(
 
     val id: Long,
 
-    val name: String
+    val name: String,
+
+    val questions: List<QuestionResource> = listOf()
 
 )

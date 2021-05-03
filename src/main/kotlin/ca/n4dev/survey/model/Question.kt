@@ -14,21 +14,19 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "question")
-data class Question (
+data class Question(
+
+    val question: String,
+
+    val questionType: QuestionType,
+
+    @ManyToOne
+    @JoinColumn(name = "survey_id", nullable = false)
+    val survey: Survey,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-
-    val question: String,
-
-    @ManyToOne
-    @JoinColumn(name = "question_type_id")
-    val questionType: QuestionType,
-
-    @ManyToOne
-    @JoinColumn(name="survey_id", nullable=false)
-    val survey: Survey,
 
     val version: Int = 0
 

@@ -12,14 +12,13 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "authority")
-data class Authority (
+data class Authority(
+
+    val code: String,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    val code: String,
-
     val version: Int = 0
-
 )

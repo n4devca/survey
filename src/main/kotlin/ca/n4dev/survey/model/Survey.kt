@@ -16,15 +16,14 @@ import javax.persistence.Table
 @Table(name = "survey")
 data class Survey(
 
+    val name: String,
+
+    @OneToMany(mappedBy = "survey")
+    val questions: List<Question> = listOf(),
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    val name: String,
-
-    @OneToMany(mappedBy = "survey")
-    val question: List<Question> = listOf(),
-
     val version: Int = 0
-
 )

@@ -4,23 +4,8 @@
  */
 package ca.n4dev.survey.model
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.Table
-
-@Entity
-@Table(name = "question_type")
-data class QuestionType (
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-
-    val code: String,
-
-    val version: Int = 0
-
-
-)
+enum class QuestionType {
+    YES_NO,
+    NUMBER_0_to_10,
+    TEXT
+}
